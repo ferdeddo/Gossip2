@@ -1,13 +1,25 @@
-<h1>Welcome to devise</h1>
+<h1>Welcome to The Gossip Project</h1>
 
-<%= user_signed_in? %>
+
 <p>
   <% if user_signed_in? %>
-      <%= link_to "se déconnecter", destroy_user_session_path,
+  <h2> <%= link_to "Regarde les gossips", '/gossips' %></h2>
+
+		<li> 
+			<%= link_to "Edit account", edit_user_registration_path %>
+		</li>	
+		<li> 
+			<%= link_to "se déconnecter", destroy_user_session_path,
           method: :delete %>
 
+
+		</li>
+
+      
   <% else %>
-      <%= link_to "se connecter", new_user_session_path %>
+     <li> <%= link_to "se connecter", new_user_session_path %>
+     </li>
+
   <% end %>
 
 </p>
